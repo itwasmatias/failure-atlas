@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e1522">
+<title>Failure Atlas — From outages to better troubleshooting</title>
+<meta name="description" content="Three sourced incidents, a transparent retrieval demonstration, and a research protocol that has not yet measured AI improvement.">
+<link rel="stylesheet" href="./style.css">
+<script defer src="./public-cases.js"></script>
+<script defer src="./app.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <a href="#top" class="brand"><span class="brand-icon">FA</span> FAILURE ATLAS <span class="brand-version">v0.1 · Demo</span></a>
+    <nav aria-label="Page sections"><a href="#try">Try it</a><a href="#incidents">Case studies</a><a href="#evidence">Evidence</a></nav>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> OPEN-SOURCE RESEARCH DEMONSTRATION</div>
+      <h1>When software fails,<br><em>evidence comes first.</em></h1>
+      <p class="lead">An outage can disrupt millions of people. Failure Atlas explores whether documented past incidents can help troubleshooters ask better questions during new failures.</p>
+      <div class="actions"><a href="#try" class="primary">Try the incident search <span aria-hidden="true">↘</span></a><a href="#evidence" class="secondary">What has actually been proven?</a></div>
+      <div class="metrics" aria-label="Project facts">
+        <div><strong>3</strong><span>Historical incidents</span></div>
+        <div><strong>12</strong><span>Prepared evaluation questions</span></div>
+        <div><strong>0</strong><span>Real-model comparisons completed</span></div>
+      </div>
+    </section>
+    <section id="try" class="section section-tool">
+      <div class="section-heading"><div><p class="eyebrow">01 / EXPLORE</p><h2>Find a similar failure</h2></div><span class="pill">No AI model involved</span></div>
+      <p class="bodycopy">Describe a symptom. This demonstration looks for overlapping words in three historical incident summaries and shows the original evidence. It does not diagnose your system or prove the same root cause.</p>
+      <form id="search-form" autocomplete="off">
+        <label for="query">What went wrong?</label>
+        <div class="searchbar"><input id="query" name="query" type="search" placeholder="e.g. HTTP errors after a firewall rules change" maxlength="240" required><button type="submit">Search cases</button></div>
+      </form>
+      <div class="examples" aria-label="Example symptom searches">
+        <span>Try:</span>
+        <button type="button" data-query="HTTP errors and CPU exhaustion after firewall rule deployment">HTTP errors</button>
+        <button type="button" data-query="Database inconsistency after a network partition">Database issue</button>
+        <button type="button" data-query="Backbone traffic concentrated at one router after routing change">Routing issue</button>
+      </div>
+      <div id="match-results" aria-live="polite" class="matches">
+        <div class="empty">Enter a symptom or choose an example above to explore related incidents.</div>
+      </div>
+      <p class="footnote">Match method: transparent keyword overlap. Not an LLM, a confidence probability, a safety assessment, or measured AI effectiveness. Similar symptoms can have completely different causes.</p>
+    </section>
+    <section id="incidents" class="section">
+      <div class="section-heading"><div><p class="eyebrow">02 / REAL-WORLD REPORTS</p><h2>Three incidents, real consequences</h2></div></div>
+      <p class="bodycopy">Each summary is a short paraphrase derived from an original engineering postmortem. Links lead to the primary publisher's report.</p>
+      <div class="case-grid" id="case-grid"></div>
+    </section>
+    <section id="evidence" class="section">
+      <div class="section-heading"><div><p class="eyebrow">03 / RESEARCH HONESTY</p><h2>What's proven — and what isn't</h2></div></div>
+      <div class="evidence-grid">
+        <article class="evidence-box">
+          <span class="pill good">VERIFIED PREPARATION</span>
+          <h3>We can show the work.</h3>
+          <ul>
+            <li>Three historical incidents have dated source references.</li>
+            <li>Twelve separate troubleshooting questions are prepared for a future comparison.</li>
+            <li>Frozen research files have integrity checks; the tests check the evaluation plumbing.</li>
+          </ul>
+        </article>
+        <article class="evidence-box">
+          <span class="pill pending">NOT YET DEMONSTRATED</span>
+          <h3>We cannot claim AI improvement.</h3>
+          <ul>
+            <li>No real solver model has completed the baseline-versus-retrieval experiment.</li>
+            <li>The 24 earlier responses were fixtures for testing software, not real model results.</li>
+            <li>Human scoring and authorization for real inference remain outstanding.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="experiment">
+        <div><p class="eyebrow">THE QUESTION THIS RESEARCH ASKS</p><h3>Does looking up past failures improve an AI's troubleshooting?</h3><p>Give the same new problem to the same model twice: once without retrieved incidents and once with relevant, sourced case summaries. Score both using the same rubric, then compare results. The test is designed, <strong>not executed</strong>.</p></div>
+        <div class="arms"><div>Baseline <span>Question only</span></div><div>Retrieval <span>Question + retrieved history</span></div><div class="pending-panel">RESULT: <strong>PENDING</strong><small>No scores to plot</small></div></div>
+      </div>
+    </section>
+    <section class="section final">
+      <p class="eyebrow">WHY IT MATTERS</p><h2>Better troubleshooting could mean shorter outages.</h2>
+      <p>When authentication, messaging or infrastructure fails, people and businesses lose access to services they rely on. Learning from previous failures may help responders investigate more systematically. <strong>That benefit is a hypothesis here, not an outcome we have measured.</strong></p>
+    </section>
+  </main>
+  <footer><span>Failure Atlas · Local, public-safe portfolio preview</span><span>Built to be inspected, tested and questioned. No external tracking or model calls.</span></footer>
+</div>
+</body>
+</html>

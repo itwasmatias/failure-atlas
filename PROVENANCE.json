@@ -1,0 +1,20 @@
+{
+  "schema": "failure-atlas-showcase-provenance/1",
+  "origin": "Failure Atlas v0.2 corrected public case paraphrases",
+  "source_path": "/home/matias/projects/failure-atlas-v0-2-20261102/corpus/cases.jsonl",
+  "source_git_checkpoint": "3f521c14d07242da2827e1fa452cd8603fff510c",
+  "source_sha256": "1062ef960c06698dbb02a0a74898b83719f5bd47b49ab891fb57bd1bcd5bc64c",
+  "output_sha256": "a6ac28e51fa4181845dacea84bf071008bb92c98d3663e6be548f9ff38d28d4e",
+  "selected_public_fields": [
+    "case_id",
+    "symptoms",
+    "cause",
+    "resolution",
+    "url",
+    "resolution_status"
+  ],
+  "case_count": 3,
+  "public_question_text_exported": false,
+  "answer_keys_exported": false,
+  "real_model_inference_performed": false
+}
